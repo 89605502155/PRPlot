@@ -2,7 +2,7 @@ from io import open
 from setuptools import setup
 
 
-version = '0.0.1'
+version = '0.0.3'
 
 with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
@@ -21,15 +21,15 @@ setup(
     long_description_content_type='text/markdown',
 
     url='https://github.com/89605502155/PRPlot',
-    # download_url='https://github.com/89605502155/N-PLS/archive/v{}.zip'.format(
-    #     version
-    # ),
-    download_url='https://github.com/89605502155/PRPlot/archive/main.zip',
+    download_url='https://github.com/89605502155/N-PLS/archive/v{}.zip'.format(
+        version
+    ),
+    # download_url='https://github.com/89605502155/PRPlot/archive/main.zip',
 
     license='GNU General Public License v3.0',
 
     packages=['PRPlot'],
-    install_requires=['matplotlib.pyplot', 'matplotlib','math','decimal'],
+    install_requires=['matplotlib.pyplot', 'matplotlib'],
 
     classifiers=[
         'License :: OSI Approved :: GNU General Public License v3 (GPLv3)',
