@@ -4,7 +4,7 @@ import math
 from decimal import Decimal
 
 
-class PRPlot():
+class PRPlot(ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
     def __int__(self, ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
         self.ms = ms
         self.lw = lw
