@@ -1,0 +1,28 @@
+Metadata-Version: 2.1
+Name: PRPlot
+Version: 0.0.1
+Summary: It is a Python library for build a very nice predict-reference plots. It is an extension of the matplotlib library
+Home-page: https://github.com/89605502155/PRPlot
+Author: Andrey Ferubko
+Author-email: ferubko1999@yandex.ru
+License: GNU General Public License v3.0
+Download-URL: https://github.com/89605502155/PRPlot/archive/main.zip
+Platform: UNKNOWN
+Classifier: License :: OSI Approved :: GNU General Public License v3 (GPLv3)
+Classifier: Operating System :: OS Independent
+Classifier: Intended Audience :: End Users/Desktop
+Classifier: Intended Audience :: Developers
+Classifier: Programming Language :: Python
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.8
+Classifier: Programming Language :: Python :: Implementation :: PyPy
+Classifier: Programming Language :: Python :: Implementation :: CPython
+Description-Content-Type: text/markdown
+License-File: LICENSE
+
+# PRPlot
+

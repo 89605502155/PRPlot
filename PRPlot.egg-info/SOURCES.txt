@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.cfg
+setup.py
+PRPlot/PRPlot.py
+PRPlot/__init__.py
+PRPlot.egg-info/PKG-INFO
+PRPlot.egg-info/SOURCES.txt
+PRPlot.egg-info/dependency_links.txt
+PRPlot.egg-info/requires.txt
+PRPlot.egg-info/top_level.txt
