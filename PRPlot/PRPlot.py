@@ -4,7 +4,7 @@ import math
 from decimal import Decimal
 
 
-class PRPlot(ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
+class PRPlot(plt,mpl):
     def __int__(self, ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
         self.ms = ms
         self.lw = lw
@@ -47,7 +47,7 @@ class PRPlot(ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot
         return lis
 
     def main(self, ref, predict, save):
-        # mpl.rc('font', family='Times New Roman')
+        mpl.rc('font', family='Times New Roman')
         fig, axs = plt.subplots(figsize=(12, 7))
         axs.plot(ref, predict, ".", color="red", ms=self.ms)
         axs.plot(ref, ref, color="blue", lw=self.lw)
