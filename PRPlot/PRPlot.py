@@ -45,6 +45,10 @@ class PRPlot():
         for i in arr2:
             lis.append(i)
         return lis
+    
+    def pr_axes(self,arr:list)-> list:
+        d=0.25*(arr[1]-arr[0])
+        return [arr[0]-d,arr[-1]+d]
 
     def main(self, ref, predict, save,ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",save_name="Plot"):
         mpl.rc('font', family='Times New Roman')
@@ -54,6 +58,10 @@ class PRPlot():
 
         lis_x, lis_x_num = self.ax(ref)
         lis_y, lis_y_num = self.ax(self.n_dat(ref,predict))
+        y_pr=self.pr_axes(lis_y_num)
+        x_pr=self.pr_axes(lis_x_num)
+        axs.set_ylim(ymin=y_pr[0],ymax=y_pr[1])
+        axs.set_xlim(xmin=x_pr[0],xmax=x_pr[1])
 
         axs.set_xticks(lis_x_num)
         axs.set_yticks(lis_y_num)

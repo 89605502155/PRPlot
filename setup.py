@@ -2,7 +2,7 @@ from io import open
 from setuptools import setup
 
 
-version = '0.0.7'
+version = '0.0.8'
 
 with open('README.md', encoding='utf-8') as f:
     long_description = f.read()
