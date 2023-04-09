@@ -56,11 +56,13 @@ class PRPlot:
         d=0.25*(arr[1]-arr[0])
         return [arr[0]-d,arr[-1]+d]
 
-    def main(self, ref, predict, save):
+    def main(self, ref, predict, save, ms=30, lw=3, name_plot=None, x_name="X", y_name="Y",
+                save_name="Plot",size_x=12,size_y=7,lab_size_x=20,
+                lab_size_y=20):
         mpl.rc('font', family='Times New Roman')
-        fig, axs = plt.subplots(figsize=(self.size_x, self.size_y))
-        axs.plot(ref, predict, ".", color="red", ms=self.ms)
-        axs.plot(ref, ref, color="blue", lw=self.lw)
+        fig, axs = plt.subplots(figsize=(size_x, size_y))
+        axs.plot(ref, predict, ".", color="red", ms=ms)
+        axs.plot(ref, ref, color="blue", lw=lw)
 
         lis_x, lis_x_num = self.ax(ref)
         lis_y, lis_y_num = self.ax(self.n_dat(ref,predict))
@@ -72,21 +74,24 @@ class PRPlot:
         axs.set_xticks(lis_x_num)
         axs.set_yticks(lis_y_num)
 
-        axs.set_ylabel(self.y_name, fontsize=25, labelpad=8)
+        axs.set_ylabel(y_name, fontsize=25, labelpad=8)
         axs.grid(color="black", linewidth=0.7)
-        axs.set_xlabel(self.x_name, fontsize=25, labelpad=15)
-        axs.set_title(self.name_plot, fontsize=28, loc="center", pad=15)
+        axs.set_xlabel(x_name, fontsize=25, labelpad=15)
+        axs.set_title(name_plot, fontsize=28, loc="center", pad=15)
         axs.tick_params(which='major', length=10, width=2)
 
-        axs.set_xticklabels(lis_x, fontsize=self.lab_size_x)
-        axs.set_yticklabels(lis_y, fontsize=self.lab_size_y)
+        axs.set_xticklabels(lis_x, fontsize=lab_size_x)
+        axs.set_yticklabels(lis_y, fontsize=lab_size_y)
 
         axs.get_xaxis().set_tick_params(direction='in')
         axs.get_yaxis().set_tick_params(direction='in')
 
         if save:
-            plt.savefig(self.save_name+'.png', format='png', dpi=300)
-            plt.savefig(self.save_name+".svg", format="svg")
+            plt.savefig(save_name+'.png', format='png', dpi=300)
+            plt.savefig(save_name+".svg", format="svg")
         plt.show()
         return 0
+    
+
+
 
